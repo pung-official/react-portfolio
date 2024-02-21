@@ -1,16 +1,18 @@
+const path = require('path');
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 require('dotenv').config();
-const port = process.env.EMAIL_PORT;
+const PORT = process.env.EMAIL_PORT || 4000;
 
 // server used to send send emails
 const app = express();
+app.use(express.static(path.resolve(__dirname, '../build')));
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(port, () => console.log("Server Running"));
+// app.listen(port, () => console.log("Server Running"));
 // console.log(process.env.EMAIL_USER);
 // console.log(process.env.EMAIL_PASS);
 
@@ -52,3 +54,11 @@ router.post("/contact", (req, res) => {
     }
   });
 });
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
+})
+
+app.listen(PORT, () =>{
+  console.log(`Server is online on port: ${PORT}`)
+})
