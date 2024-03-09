@@ -23,12 +23,14 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "engines":{
+  "engines": {
     "npm": "7.24.2",
     "node": "16.19.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run start:react\" \"npm run start:server\"",
+    "start:react": "react-scripts start",
+    "start:server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -52,7 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^12.1.5"
+    "@testing-library/react": "^12.1.5",
+    "concurrently": "^8.2.2"
   }
-  
 }
