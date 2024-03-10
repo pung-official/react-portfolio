@@ -52,7 +52,7 @@ jobs:
           name: node-app
       
       - name: Clean up temporary folders
-        run: Remove-Item -Path "C:\local\Temp\zipdeploy\extracted\*" -Recurse -Force
+        run: rm -rf /home/runner/work/_temp/zipdeploy/extracted/*
           
       - name: Unzip artifact
         run: tar -xzf node-app.tar.gz    
