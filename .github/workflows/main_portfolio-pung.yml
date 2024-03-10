@@ -50,6 +50,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
+      
+      - name: Clean up temporary folders
+        run: Remove-Item -Path "C:\local\Temp\zipdeploy\extracted\*" -Recurse -Force
           
       - name: Unzip artifact
         run: tar -xzf node-app.tar.gz    
