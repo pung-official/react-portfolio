@@ -7,7 +7,7 @@ const PORT = process.env.EMAIL_PORT || 4000;
 
 // server used to send send emails
 const app = express();
-app.use(express.static(path.resolve(__dirname, '../build')));
+app.use(express.static(path.resolve(__dirname, 'build')));
 app.use(cors());
 app.use(express.json());
 // app.listen(port, () => console.log("Server Running"));
@@ -54,7 +54,7 @@ app.post("/contact", (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 })
 
 app.listen(PORT, () =>{
