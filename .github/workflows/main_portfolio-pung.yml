@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -21,19 +21,20 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build
+      - name: npm install, build, and test
         run: |
           npm install
           npm run build --if-present
-      
-      - name: Compress artifacts
-        run: tar -czf node-app.tar.gz .
-      - name: Upload compressed artifact
+          npm run test --if-present
+
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
+
+      - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: build/
-
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,23 +50,20 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
-      
-      - name: Clean up temporary folders
-        run: rm -rf /home/runner/work/_temp/zipdeploy/extracted/*
-          
-      - name: Unzip artifact
-        run: tar -xzf node-app.tar.gz    
+
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
       
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8365EF7E2AEB4B34BEC6A55CED1CAA56 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_AEBC452C20EF40D09F9B7F8B3A543DB1 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C54FBC62BFEC470A9EB7F77887B0FC6B }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EE478234DC6643BF91645FDE8F168F0B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C962591339204D2C92CEA72103E2E7D7 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6BDC52CA7EAD4FA29F960E53184FB25C }}
 
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
         with:
           app-name: 'portfolio-pung'
           slot-name: 'Production'
