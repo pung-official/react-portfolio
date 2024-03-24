@@ -45,7 +45,7 @@ export const Experience = () => {
               <ul>
                 <li>Act as a proficient intermediry, effectively translating project requirements and briefs to the team with clarify and precision</li>
                 <li>Offer valuable insights to clients, ensuring a comprehensive understanding of the system's behavior and functionality</li>
-                <li>Meticulously document and curate comprehensive technical guidelines within the team</li>
+                <li>Meticulously document and curate comprehensive technical guidelines with the team</li>
               </ul>
               </div>
             </div>
@@ -62,9 +62,9 @@ export const Experience = () => {
               <div className="p-2"> 
                 <u>Degree Internship</u><br/>
                 <ul>
-                    <li>Car seat ordering website feature enhancement</li>
-                    <li>Company website development using Wordress</li>
-                    <li>Using Microsoft Foxpro to create data conversion application</li>
+                    <li>Car seat ordering website development</li>
+                    <li>Company website development using Wordpress</li>
+                    <li>Using Microsoft FoxPro to create data conversion application</li>
                 </ul>
               </div>
             </div>
@@ -81,7 +81,7 @@ export const Experience = () => {
               <div className="p-2"> 
                 <u>Diploma Internship</u><br/>
                 <ul>
-                    <li>Exploring Atlassian code version control tool and brief the whole company</li>
+                    <li>Exploring Atlassian code version control tool and brief the tech team in the company</li>
                     <li>Learning Machine Vision C# application</li>
                     <li>IT support including but not limited to PC formatting, network configuration and router setup.</li>
                 </ul>
