@@ -23,9 +23,12 @@ export const Experience = () => {
               <h3 className="text-black">Germs Digital</h3>
               <div className="p-2">
                 <u>Web Developer</u><br/>
-                - Delivered migration project with more than 500 pages for one of the top 3 banks in Singapore<br/>
-                - Crafting Microsites and eDMs in alignment with Figma designs and concepts<br/>
-                - Seamlessly integrating and updating features/functions for both new and existing websites</div>
+                <ul>
+                  <li>Delivered migration project with more than 500 pages for one of the top 3 banks in Singapore</li>
+                  <li>Crafting Microsites and eDMs in alignment with Figma designs and concepts</li>
+                  <li>Seamlessly integrating and updating features/functions for both new and existing websites</li>
+                </ul>
+              </div>
             </div>
             <div className="col-2 col-sm-1 px-md-4 order-2 timeline-image text-md-center p-1">
               <img src={iconCode} className="img-fluid p-2" alt="img" />
@@ -39,9 +42,11 @@ export const Experience = () => {
               <h3 className="text-black">Webscape Consulting Pte Ltd</h3>
               <div className="p-2"><u>Webmaster</u><br/>As a experience webmaster, I adeptly handle and fulfill daily tasks and requests.<br/><br/>
               <u>Business Analyst (2021 onwards)</u><br/>
-              - Act as a proficient intermediry, effectively translating project requirements and briefs to the team with clarify and precision<br/>
-              - Offer valuable insights to clients, ensuring a comprehensive understanding of the system's behavior and functionality<br/>
-              - Meticulously document and curate comprehensive technical guidelines within the team
+              <ul>
+                <li>Act as a proficient intermediry, effectively translating project requirements and briefs to the team with clarify and precision</li>
+                <li>Offer valuable insights to clients, ensuring a comprehensive understanding of the system's behavior and functionality</li>
+                <li>Meticulously document and curate comprehensive technical guidelines within the team</li>
+              </ul>
               </div>
             </div>
             <div className="col-2 col-sm-1 px-md-4 order-2 timeline-image text-md-center p-1">
@@ -53,26 +58,40 @@ export const Experience = () => {
           </div>
           <div className="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
             <div className="col-10 col-md-5 order-3 order-md-1 timeline-content p-0">
-              <h3 className=" text-black">Degree</h3>
-              <div className="p-2">- Internship done in CTC Integrated Software Engineering.<br/> - Built Homestay Booking Application</div>
+              <h3 className=" text-black">CTC Integrated Software Engineering</h3>
+              <div className="p-2"> 
+                <u>Degree Internship</u><br/>
+                <ul>
+                    <li>Car seat ordering website feature enhancement</li>
+                    <li>Company website development using Wordress</li>
+                    <li>Using Microsoft Foxpro to create data conversion application</li>
+                </ul>
+              </div>
             </div>
             <div className="col-2 col-sm-1 px-md-4 order-2 timeline-image text-md-center p-1">
               <img src={iconLearning} className="img-fluid p-2" alt="img" />
             </div>
             <div className="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-              <time>2015 - 2018</time>
+              <time>2018 - 3 months</time>
             </div>
           </div>
           <div className="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
             <div className="col-10 col-md-5 order-3 order-md-1 timeline-content p-0">
-              <h3 className=" text-black">Diploma</h3>
-              <p>- Participated in CDP star award web competition<br/>- Internship done in Neuphoenix Machine Vision</p>
+              <h3 className=" text-black">Neuphoenix Machine Vision</h3>
+              <div className="p-2"> 
+                <u>Diploma Internship</u><br/>
+                <ul>
+                    <li>Exploring Atlassian code version control tool and brief the whole company</li>
+                    <li>Learning Machine Vision C# application</li>
+                    <li>IT support including but not limited to PC formatting, network configuration and router setup.</li>
+                </ul>
+              </div>
             </div>
             <div className="col-2 col-sm-1 px-md-4 order-2 timeline-image text-md-center p-1">
               <img src={iconBook} className="img-fluid p-2" alt="img" />
             </div>
             <div className="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-              <time>2013 - 2015</time>
+              <time>2015 - 3 months</time>
             </div>
           </div>
         </div>

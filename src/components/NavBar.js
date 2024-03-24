@@ -4,6 +4,7 @@ import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/linkedin.png';
 import navIcon2 from '../assets/img/resume.png';
 import navIcon3 from '../assets/img/whatsapp.png';
+import resume from '../assets/pdf/resume.pdf';
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -44,9 +45,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="#"><img src={navIcon2} alt="" /></a>
-                    <a href="https://wa.me/+6581363604"><img src={navIcon3} alt="" target="_blank"/></a>
-                    <a href="https://sg.linkedin.com/in/kui-sin-pung-24a398224" target="_blank"><img src={navIcon1} alt="" /></a>
+                    <a href={resume} title="Resume" target="_blank"><img src={navIcon2} alt="" /></a>
+                    <a href="https://wa.me/+6581363604" title="Whtasapp"><img src={navIcon3} alt="" target="_blank"/></a>
+                    <a href="https://sg.linkedin.com/in/kui-sin-pung-24a398224" target="_blank" title="LinkedIn"><img src={navIcon1} alt="" /></a>
                 </div>
                 <a href="#connect" className="hire-button">
                   <span></span>
