@@ -11,6 +11,9 @@ import projImg7 from "../assets/img/form.jpg";
 import projImg8 from "../assets/img/pfs.jpg";
 import projImg9 from "../assets/img/homestay.jpg";
 import projImg10 from "../assets/img/edm-full.jpg";
+import projImg11 from "../assets/img/motion-game.jpg";
+import projImg12 from "../assets/img/filter-game.jpg";
+import projVideo from "../assets/video/motion-detection-game.mp4";
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
@@ -19,7 +22,7 @@ export const Projects = () => {
             title: "Dining Advisor",
             description: "Laravel & React JS",
             imgUrl: projImg4,
-            link: ""
+            link: "https://thediningadvisor.com/home"
         },
         {
             title: "UOB Research Project",
@@ -42,6 +45,18 @@ export const Projects = () => {
     ];
     const mobileapps = [
         {
+            title: "GovTech Security Awareness Capaign",
+            description: "NEXT JS, Fraser",
+            imgUrl: projImg11,
+            link: projVideo
+        },
+        {
+            title: "TIKTOK Filter Game - To raise awareness of domestic violence in Singapore",
+            description: "Effect House, TikTok",
+            imgUrl: projImg12,
+            link: "https://vt.tiktok.com/ZSMN99jBn"
+        },
+        {
             title: "Homestay Reservation App",
             description: "Android Studio, Java, PHP",
             imgUrl: projImg9,
@@ -49,12 +64,6 @@ export const Projects = () => {
         }
     ];
     const miniprojects = [
-        {
-            title: "UOB Form",
-            description: "Development",
-            imgUrl: projImg7,
-            link: "https://forms.uob.com.sg/industry-insights/download-form.html"
-        },
         {
             title: "Debt Consolidation Plan Calculator",
             description: "Teamsite Customised Component",
@@ -85,7 +94,7 @@ export const Projects = () => {
                             <Nav.Link eventKey="first">Website</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="second">Mobile App</Nav.Link>
+                            <Nav.Link eventKey="second">Mobile App/Games</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link eventKey="third">Mini Project</Nav.Link>
