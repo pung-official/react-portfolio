@@ -49,6 +49,7 @@ export const NavBar = () => {
                     <a href="https://sg.linkedin.com/in/kui-sin-pung-24a398224"  title="LinkedIn" target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
                 </div>
                 <a href="#connect" className="hire-button">
+                  Hire Me!
                   <span></span>
                   <span></span>
                   <span></span>

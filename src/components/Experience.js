@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import iconCode from '../assets/img/gif/code.gif';
 import iconBook from '../assets/img/gif/book.gif';
 import iconLearning from '../assets/img/gif/learning.gif';
