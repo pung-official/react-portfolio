@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import profileImg from "../assets/img/profile.png";
@@ -11,7 +11,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300);
     const period = 2000;
-    const toRotate = ["Pung", "Web Developer", "App Developer"];
+    const toRotate = useMemo(() => ["Pung", "Web Developer", "App Developer"], []);
       
    // Define tick with useCallback so it's stable and defined before useEffect
   const tick = useCallback(() => {
