@@ -5,49 +5,68 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Contact = () => {
-    const formInitialDetails = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
-      }
-      const [formDetails, setFormDetails] = useState(formInitialDetails);
-      const [buttonText, setButtonText] = useState('Send');
-      const [status, setStatus] = useState({});
+  const formInitialDetails = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
+  
+  const [formDetails, setFormDetails] = useState(formInitialDetails);
+  const [buttonText, setButtonText] = useState('Send');
+  const [status, setStatus] = useState({});
+  
+  const onFormUpdate = (category, value) => {
+    setFormDetails({
+      ...formDetails,
+      [category]: value
+    });
+  };
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setButtonText("Sending...");
     
-      const onFormUpdate = (category, value) => {
-          setFormDetails({
-            ...formDetails,
-            [category]: value
-          })
-      }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setButtonText("Sending...");
-        let response = await fetch ("/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json;charset=utf-8",
-            },
-            body: JSON.stringify(formDetails),
+    try {
+      let response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify({
+          firstName: formDetails.firstName,
+          lastName: formDetails.lastName,
+          email: formDetails.email,
+          phone: formDetails.phone,
+          message: formDetails.message
+        }),
+      });
+      
+      let result = await response.json();
+      
+      setFormDetails(formInitialDetails);
+      if (response.ok) {  // Better to check response status
+        setStatus({
+          success: true,  // Fixed typo (was 'seccess')
+          message: 'Message sent successfully'
         });
-        setButtonText("Send");
-        let result = await response.json();
-        setFormDetails(formInitialDetails);
-        if (result.code === 200){
-            setStatus({
-                seccess: true,
-                message: 'Message sent successfully'
-            });
-        } else{
-            setStatus ({ 
-                seccess: false,
-                message: 'Something went wrong, please try again later.'
-            })
-        }
+      } else {
+        setStatus({ 
+          success: false,
+          message: result.message || 'Something went wrong, please try again later.'
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setStatus({ 
+        success: false,
+        message: 'Network error, please try again later.'
+      });
+    } finally {
+      setButtonText("Send");
     }
+  };
 
     return(
         <section className="contact" id="connect">
