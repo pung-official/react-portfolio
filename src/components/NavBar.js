@@ -44,9 +44,15 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
                 <div className="social-icon">
-                    <a href={resume} title="Resume" target="_blank" rel="noreferrer"><img src={navIcon2} alt="" /></a>
-                    <a href="https://wa.me/+6581363604" title="Whtasapp" target="_blank" rel="noreferrer"><img src={navIcon3} rel="noreferrer"/></a>
-                    <a href="https://sg.linkedin.com/in/kui-sin-pung-24a398224"  title="LinkedIn" target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
+                    <a href={resume} title="Resume" target="_blank" rel="noreferrer">
+                      <img src={navIcon2} alt="Resume" />
+                    </a>
+                    <a href="https://wa.me/+6581363604" title="Whtasapp" target="_blank" rel="noreferrer">
+                      <img src={navIcon3}  alt="WhatsApp"/>
+                    </a>
+                    <a href="https://sg.linkedin.com/in/kui-sin-pung-24a398224"  title="LinkedIn" target="_blank" rel="noreferrer">
+                      <img src={navIcon1}  alt="LinkedIn"/>
+                    </a>
                 </div>
                 <a href="#connect" className="hire-button">
                   Hire Me!
@@ -54,7 +60,6 @@ export const NavBar = () => {
                   <span></span>
                   <span></span>
                   <span></span>
-                  Hire Me!
                 </a>
             </span>
           </Navbar.Collapse>
