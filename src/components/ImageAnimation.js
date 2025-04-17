@@ -46,7 +46,7 @@ export const ImageAnimation = () => {
         >
           <img
             src="/static/media/meter1.c4085ff859afbd8488e9da47d4953850.svg" // Replace with your image source
-            alt={`Image ${image.id}`}
+            alt={`Meter ${image.id}`}
             style={{ width: '100%', height: '100%' }}
           />
         </motion.div>

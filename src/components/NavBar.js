@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/linkedin.png';
 import navIcon2 from '../assets/img/resume.png';
 import navIcon3 from '../assets/img/whatsapp.png';
@@ -45,9 +44,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
                 <div className="social-icon">
-                    <a href={resume} title="Resume" target="_blank"><img src={navIcon2} alt="" /></a>
-                    <a href="https://wa.me/+6581363604" title="Whtasapp"><img src={navIcon3} alt="" target="_blank"/></a>
-                    <a href="https://sg.linkedin.com/in/kui-sin-pung-24a398224" target="_blank" title="LinkedIn"><img src={navIcon1} alt="" /></a>
+                    <a href={resume} title="Resume" target="_blank" rel="noreferrer"><img src={navIcon2} alt="" /></a>
+                    <a href="https://wa.me/+6581363604" title="Whtasapp" target="_blank" rel="noreferrer"><img src={navIcon3} rel="noreferrer"/></a>
+                    <a href="https://sg.linkedin.com/in/kui-sin-pung-24a398224"  title="LinkedIn" target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
                 </div>
                 <a href="#connect" className="hire-button">
                   <span></span>
