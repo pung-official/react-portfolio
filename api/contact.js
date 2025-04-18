@@ -1,17 +1,15 @@
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
+  // CORS headers
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-    // Add CORS headers
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'POST');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  
-    // Handle preflight requests
-    if (req.method === 'OPTIONS') {
-      return res.status(200).end();
-    }
-    
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
   }
@@ -19,7 +17,7 @@ export default async function handler(req, res) {
   const { firstName, lastName, email, phone, message } = req.body;
   const name = `${firstName} ${lastName}`;
 
-  const contactEmail = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: process.env.EMAIL_ADDRESS,
@@ -27,8 +25,8 @@ export default async function handler(req, res) {
     },
   });
 
-  const mail = {
-    from: name,
+  const mailOptions = {
+    from: `${name} <${email}>`,  // More standard format
     to: "pungkuisin@gmail.com",
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
@@ -38,7 +36,7 @@ export default async function handler(req, res) {
   };
 
   try {
-    await contactEmail.sendMail(mail);
+    await transporter.sendMail(mailOptions);
     res.status(200).json({ code: 200, status: "Message Sent" });
   } catch (error) {
     res.status(500).json({ code: 500, status: "Error", error: error.toString() });
