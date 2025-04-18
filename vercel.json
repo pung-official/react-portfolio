@@ -10,16 +10,5 @@
       "src": "api/contact.js",
       "use": "@vercel/node"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/contact",
-      "methods": ["POST"],
-      "dest": "/api/contact.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
   ]
 }
