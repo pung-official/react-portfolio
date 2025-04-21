@@ -91,7 +91,7 @@ export const Projects = () => {
                             <Nav.Link eventKey="first">Website</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="second">Mobile App/ Games</Nav.Link>
+                            <Nav.Link eventKey="second">Web App</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link eventKey="third">Mini Project</Nav.Link>

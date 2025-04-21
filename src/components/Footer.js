@@ -18,7 +18,7 @@ export const Footer = () => {
                         <p>CopyRight 2024. All Right Reserved</p>
                     </Col> */}
                     <Col sm={12} className="text-center">
-                        2024 &copy; All rights reserved.
+                        2025 &copy; All rights reserved.
                     </Col>
                 </Row>
             </Container>
