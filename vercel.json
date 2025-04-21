@@ -1,18 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
-    },
-    {
-      "src": "api/contact.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "api/hello.js",
-      "use": "@vercel/node"
-    }
-  ]
+  "version": 2
 }
