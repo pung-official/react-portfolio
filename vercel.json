@@ -2,8 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+      "src": "api/contact.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["api/**/*.js"]
+      }
     },
     {
       "src": "package.json",
@@ -14,7 +17,13 @@
     }
   ],
   "routes": [
-    {"src": "/api/(.*)", "dest": "/api/$1"},
-    {"src": "/(.*)", "dest": "/$1"}
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/contact"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
   ]
 }
