@@ -72,7 +72,7 @@ export const Projects = () => {
             title: "Tax Payment Rebate Calculator",
             description: "Teamsite Customised Component",
             imgUrl: projImg13,
-            link: "https://www.uob.com.sg/personal/save/one-account-tax-saver.page"
+            link: "https://www.uob.com.sg/personal/save/one-account-tax-saver.page#calculator"
         },
         {
             title: "Electronic Direct Mail",
