@@ -10,6 +10,7 @@ import projImg9 from "../assets/img/homestay.jpg";
 import projImg10 from "../assets/img/edm-full.jpg";
 import projImg11 from "../assets/img/motion-game.jpg";
 import projImg12 from "../assets/img/filter-game.jpg";
+import projImg13 from "../assets/img/tax-rebate-calculator.jpg";
 import projVideo from "../assets/video/motion-detection-game.mp4";
 import TrackVisibility from 'react-on-screen';
 
@@ -66,6 +67,12 @@ export const Projects = () => {
             description: "Teamsite Customised Component",
             imgUrl: projImg5,
             link: "https://www.uob.com.sg/personal/borrow/personal-financing/debt-consolidation-plan.page#how-it-works"
+        },
+        {
+            title: "Tax Payment Rebate Calculator",
+            description: "Teamsite Customised Component",
+            imgUrl: projImg13,
+            link: "https://www.uob.com.sg/personal/save/one-account-tax-saver.page"
         },
         {
             title: "Electronic Direct Mail",
