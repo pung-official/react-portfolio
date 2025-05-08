@@ -24,9 +24,11 @@ export const Experience = () => {
               <div className="p-2">
                 <u>Web Developer</u><br/>
                 <ul>
-                  <li>Delivered migration project with more than 500 pages for one of the top 3 banks in Singapore</li>
-                  <li>Crafting Microsites and eDMs in alignment with Figma designs and concepts</li>
-                  <li>Seamlessly integrating and updating features/functions for both new and existing websites</li>
+                  <li>Revamp and manage over 500 web pages using a commercial CMS for one of the top 3 banks in Singapore</li>
+                  <li>Develop and maintain an interactive campaign game for GovTech Singapore</li>
+                  <li>Create TikTok filter scoring games using Effect House</li>
+                  <li>Lead customization and development of website components using frontend technologies</li>
+                  <li>Design and develop responsive EDMs</li>
                 </ul>
               </div>
             </div>
